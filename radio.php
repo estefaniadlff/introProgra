@@ -11,8 +11,8 @@ $radio=10;
 $n=3.1416;
 $altura=20;
 
-$area=2($pi)($altura)($radio)
-$volumen=($pi)($radio)($altura)
+$area=2*$n*$altura*$radio;
+$volumen=($pi)($radio)($altura);
 
 </body>
 </html>DOSTYPE5 <HTML></HTML>
