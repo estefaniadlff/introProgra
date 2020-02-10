@@ -1,0 +1,40 @@
+<?php
+   $valor=10;
+   $valor2=11;
+   $valor3=21;
+   $mayor=0;$intermedio=0;$menor=0;
+   if($valor>$valor2){
+       if($valor>$valor3){
+           $mayor=$valor;
+           if($valor2>$valor3){
+               $intermedio=$valor2;
+               $menor=$valor3;
+           }else{
+            $intermedio=$valor3;
+            $menor=$valor2;
+            }
+       }
+       
+   }else if($valor2>$valor3){
+       $mayor=$valor2;
+            if($valor>$valor3){
+                $intermedio=$valor;
+                $menor=$valor3;
+            }else{
+                $intermedio=$valor3;
+                $menor=$valor;
+            }
+        }
+        else{
+            $mayor=$valor3;
+            if($valor2>$valor){
+                $intermedio=$valor2;
+                $menor=$valor;
+            }
+            else{
+                $intermedio=$valor2;
+                $menor=$valor;
+            }
+        }
+   echo "Mayor ", $mayor, " Intermedio ", $intermedio, " Menor " ,$menor;
+?>
