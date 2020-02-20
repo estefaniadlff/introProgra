@@ -42,6 +42,36 @@ $(document).ready(function() {
 </header>
 
 <!-- Begin page content -->
+<<?php 
+if (isset($_POST['Insertar'])) {
+  ///////////////////////////////informacion enviada por el formulario\\\\\\\\\\\\\\\\\\\
+  $nombres=$_POST['nombres'];
+  $apellidos=$POST['apellidos'];
+  $profesion=$POST['profesion'];
+  $estado=$POST['estado'];
+  $fregis= date('y-m-d')
+
+  ///////////////////////////////fin informacion enviada por el formulario\\\\\\\\\\\\\\\\\\\
+ 
+ ///////////////////////////////insertar a la tabla la informaion generada \\\\\\\\\\\\\\\\\\\
+  $sql="insert into db_demo(nombres,apellidos.profesion,estado,fregis)
+  values(:nombres,:apellidos,:profesion,:estado,:fregis)";
+
+  $sql = $connect->prepare($sql);
+
+  $sql->bindparam(':nombres',$nombres,PDO::PARAM_STR, 25);
+  $sql->bindparam(':apellidos',$apellidos,PDO::PARAM_STR,25);
+  $sql->bindparam(':profesion',$profesion,PDO::PARAM_STR,25);
+  $sql->bindparam(':estado',$estado,PDO::PARAM_STR,25);
+  $sql->bindparam(':fregis',$fregis,PDO::PARAM_STR);
+
+
+  $sql->excute();
+
+  $lastIntertId = $connect->lastInsertId();
+  if($lastInsertId>0){
+
+ ?>
 
 <div class="container">
 
@@ -102,7 +132,7 @@ $(document).ready(function() {
 </thead>
 <tbody>
 <?php
-$sql = "SELECT * FROM tbl_personal"; 
+$sql = "SELECT * FROM db_demo"; 
 $query = $connect -> prepare($sql); 
 $query -> execute(); 
 $results = $query -> fetchAll(PDO::FETCH_OBJ); 
