@@ -17,14 +17,14 @@
 </select>
 
  <br>  
- <br>
+<br>
  <br>
 valor :   <input type="text" name="valor">
  <br>
   <br>
    <br>
  <input type="submit" name="enviar">
-
+ 
 
 <?php
 
