@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<form action="tablas.php" method="post"/>
+<form action="Resultados.php" method="post"/>
 
 <p><h1> MULTIPLICADOR</h1> </p>
 
@@ -30,12 +30,11 @@
 
 <br>
  <br>
-multiplicador :   <input type="number" name="multiplicador">
+multiplicador :   <input type="number" name="multiplicador4">
  <br>
   <br>
    <br>
  <input type="submit" name="generar">
-
 
 
 
