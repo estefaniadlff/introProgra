@@ -25,6 +25,4 @@
  	fecha:".$fecha. "<br>concepto:".$concepto."<br>cantidad:".$cantidad. "<br>saldo:".
  	$saldo."";
  	 }
-
-
  ?>
